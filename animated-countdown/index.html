@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Countdown</title>
+  </head>
+  <body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="settings">
+      <div class="settings-content">
+        <h1>🎉 炫酷倒计时</h1>
+        <div class="input-group">
+          <label for="countdown-time">设置倒计时秒数：</label>
+          <input type="number" id="countdown-time" min="1" max="60" value="3" />
+        </div>
+        <div class="input-group">
+          <label for="animation-style">选择动画效果：</label>
+          <select id="animation-style">
+            <option value="rotate">旋转效果</option>
+            <option value="zoom">缩放效果</option>
+            <option value="flip">3D翻转</option>
+            <option value="bounce">弹跳效果</option>
+          </select>
+        </div>
+        <button id="start-btn" class="start-btn">开始倒计时</button>
+      </div>
+    </div>
+
+    <div class="counter hide">
+      <div class="nums" id="nums-container"></div>
+      <h4>Get Ready</h4>
+    </div>
+
+    <div class="final">
+      <h1>GO</h1>
+      <button id="replay">
+        <span>重新设置</span>
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
