@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>倒计时计时器</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="settings-panel" id="settings-panel">
+        <div class="settings-content">
+          <h1>倒计时设置</h1>
+          <div class="form-group">
+            <label for="countdown-hours">小时</label>
+            <input type="number" id="countdown-hours" min="0" max="23" value="0" />
+          </div>
+          <div class="form-group">
+            <label for="countdown-minutes">分钟</label>
+            <input type="number" id="countdown-minutes" min="0" max="59" value="0" />
+          </div>
+          <div class="form-group">
+            <label for="countdown-seconds">秒数</label>
+            <input type="number" id="countdown-seconds" min="0" max="59" value="10" />
+          </div>
+          <button id="start-btn" class="btn btn-primary">开始倒计时</button>
+        </div>
+      </div>
+
+      <div class="countdown-display" id="countdown-display" style="display: none;">
+        <div class="countdown-header">
+          <h2>倒计时进行中</h2>
+        </div>
+        <div class="flip-container" id="flip-container">
+          <div class="time-unit">
+            <div class="time-label">时</div>
+            <div class="flip-clock" id="hours-clock">
+              <div class="flip-card">
+                <div class="flip-card-top">00</div>
+                <div class="flip-card-bottom">00</div>
+              </div>
+            </div>
+          </div>
+          <div class="separator">:</div>
+          <div class="time-unit">
+            <div class="time-label">分</div>
+            <div class="flip-clock" id="minutes-clock">
+              <div class="flip-card">
+                <div class="flip-card-top">00</div>
+                <div class="flip-card-bottom">00</div>
+              </div>
+            </div>
+          </div>
+          <div class="separator">:</div>
+          <div class="time-unit">
+            <div class="time-label">秒</div>
+            <div class="flip-clock" id="seconds-clock">
+              <div class="flip-card">
+                <div class="flip-card-top">10</div>
+                <div class="flip-card-bottom">10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="countdown-controls">
+          <button id="pause-btn" class="btn btn-secondary">暂停</button>
+          <button id="reset-btn" class="btn btn-secondary">重置</button>
+        </div>
+      </div>
+
+      <div class="countdown-finished" id="countdown-finished" style="display: none;">
+        <div class="finished-content">
+          <h1>倒计时结束</h1>
+          <p>时间已到</p>
+          <button id="restart-btn" class="btn btn-primary">重新设置</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
